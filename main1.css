@@ -1,0 +1,51 @@
+.site{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* distancia da edge da grid ate a primeira linha, a largura das linhas*/
+    grid-template-rows: auto 1fr 3fr; /* auto: fit content */
+    grid-template-areas:
+        "title title title"
+        "main header header"
+        "main sidebar footer";
+
+    border: 1px solid black;
+}
+
+.site header.masthead{
+    grid-column: 2/4; /*item de grid aparece da coluna 2 até a 4*/
+    grid-row: 2/3;
+
+
+    background-color: blue;
+}
+
+.site h1.page-title{
+    grid-column: 1/4;
+    grid-row: 1/2;
+
+    /*Default configs*/
+    margin: 0px;
+    font-size: 1em;
+    font-weight: normal;
+    background-color: blueviolet;
+}
+
+.site main.main-content{
+    grid-column: 1/2;
+    grid-row: 2/4;
+
+    background-color: brown;
+}
+
+.site aside.sidebar{
+    grid-column: 2/3;
+    grid-row: 3/4;
+
+    background-color: chartreuse;
+}
+
+.site footer.footer{
+    grid-column: 3/4;
+    grid-row: 3/4;
+
+    background-color: darkgray;
+}
